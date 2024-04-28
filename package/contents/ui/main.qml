@@ -1,7 +1,3 @@
-/*
- *   SPDX-FileCopyrightText: 2023 Oliver Beard <olib141@outlook.com>
- *   SPDX-License-Identifier: MIT
- */
 
 import QtQuick
 import QtQuick.Layouts
@@ -12,28 +8,12 @@ import org.kde.plasma.components as PlasmaComponents
 import org.kde.kirigami as Kirigami
 
 
-// PlasmoidItem {
-//     Layout.minimumWidth: Kirigami.Units.gridUnit * 5
-//     Layout.minimumHeight: Kirigami.Units.gridUnit * 5
-//
-//     implicitHeight: Kirigami.Units.gridUnit * 10
-//     implicitWidth: Kirigami.Units.gridUnit * 10
-//
-//     PlasmaComponents.Label {
-//         anchors.fill: parent
-//         wrapMode: Text.Wrap
-//         text: i18n("Hello world")
-//     }
-// }
-
-
-
 PlasmoidItem {
     id:root
 
-
     property string p1: ""
     property string p2: ""
+    property string summ: "0"
 
     Layout.minimumWidth: Kirigami.Units.gridUnit * 5
     Layout.minimumHeight: Kirigami.Units.gridUnit * 5
@@ -42,11 +22,15 @@ PlasmoidItem {
     implicitWidth: Kirigami.Units.gridUnit * 10
 
     function callback(x){
+
         if (x.responseText) {
             var d = JSON.parse(x.responseText);
 
             root.p1 = d.data.p1;
             root.p2 = d.data.p2;
+
+            summ = (parseInt(root.p1)+parseInt(root.p2));
+
         }
     }
 
@@ -67,25 +51,31 @@ PlasmoidItem {
 
     Rectangle {
         color: "#0f0" // white
-         Layout.fillHeight: true
-         Layout.fillWidth: true
+        Layout.fillHeight: true
+        Layout.fillWidth: true
 
-         }
+    }
 
     ColumnLayout {
 
-
         PlasmaComponents.Label{
-
-            Text {  text:  i18n("Panel 1: "+root.p1+" Watt")}
-
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.Wrap
+            text:  i18n("Panel 1: "+root.p1+" Watt")
         }
 
         PlasmaComponents.Label{
 
-            Text {  text: "Panel 2: "+root.p2+" Watt"}
-
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.Wrap
+            text: i18n("Panel 2: "+root.p2+" Watt")
         }
 
+        PlasmaComponents.Label{
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.Wrap
+
+            text: i18n("Total: "+summ+" Watt")
+        }
     }
 }

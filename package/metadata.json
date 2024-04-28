@@ -2,7 +2,7 @@
     "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Name": "EZ Monitor",
-        "Id": "org.kde.agundur.ez-monitor",
+        "Id": "de.agundur.ezmonitor",
         "Description": "Shows power produced by solar panels",
         "Category": "Status Information",
 		"Icon": "temperature-warm",

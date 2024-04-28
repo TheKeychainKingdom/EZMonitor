@@ -15,6 +15,8 @@ PlasmoidItem {
     property string p2: ""
     property string summ: "0"
 
+
+    Plasmoid.status: PlasmaCore.Types.ActiveStatus
     Plasmoid.backgroundHints: PlasmaCore.Types.DefaultBackground | PlasmaCore.Types.ConfigurableBackground
 
     Layout.minimumWidth: Kirigami.Units.gridUnit * 5

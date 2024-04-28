@@ -46,16 +46,12 @@ PlasmoidItem {
         running: true
         repeat: true
         triggeredOnStart: true
-        interval: 60000
+        interval: 10000
         onTriggered: request('http://192.168.178.38:8050/getOutputData',callback)
     }
 
-    Rectangle {
-        color: "#0f0" // white
-        Layout.fillHeight: true
-        Layout.fillWidth: true
 
-    }
+    // wtimer.start()
 
     ColumnLayout {
 

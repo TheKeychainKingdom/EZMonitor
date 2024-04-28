@@ -44,6 +44,7 @@ PlasmoidItem {
 
     Timer {
         running: true
+        repeat: true
         triggeredOnStart: true
         interval: 60000
         onTriggered: request('http://192.168.178.38:8050/getOutputData',callback)

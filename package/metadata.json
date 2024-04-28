@@ -1,0 +1,23 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Name": "EZ Monitor",
+        "Id": "org.kde.agundur.ez-monitor",
+        "Description": "Shows power produced by solar panels",
+        "Category": "Status Information",
+		"Icon": "temperature-warm",
+		"Authors": [
+			{
+				"Email": "alec@agundur.de",
+				"Name": "Alec"
+			}
+		],
+        "Version": "0.1",
+		"License": "MIT",
+		"Website": "https://www.agundur.de",
+		"BugReportUrl": "alec@agundur.de"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-API": "declarativeappletscript",
+    "X-Plasma-MainScript": "ui/main.qml"
+}

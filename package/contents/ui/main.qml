@@ -54,9 +54,7 @@ PlasmoidItem {
         onTriggered: request('http://192.168.178.38:8050/getOutputData',callback)
     }
 
-
-    // wtimer.start()
-
+    // TODO: Plasmoid.fullRepresentation and  Plasmoid.compactRepresentation
     ColumnLayout {
 
         PlasmaComponents.Label{

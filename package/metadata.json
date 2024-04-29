@@ -5,17 +5,17 @@
         "Id": "de.agundur.ezmonitor",
         "Description": "Shows power produced by solar panels",
         "Category": "Status Information",
-		"Icon": "temperature-warm",
+		"Icon": "sun-fill.svg",
 		"Authors": [
 			{
-				"Email": "alec@agundur.de",
+				"Email": "scholz@agundur.de",
 				"Name": "Alec"
 			}
 		],
         "Version": "0.1",
 		"License": "MIT",
 		"Website": "https://www.agundur.de",
-		"BugReportUrl": "alec@agundur.de"
+		"BugReportUrl": "scholz@agundur.de"
     },
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-API": "declarativeappletscript",

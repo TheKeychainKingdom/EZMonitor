@@ -9,31 +9,59 @@ KCM.SimpleKCM {
 
     property string cfg_Host
     property int cfg_Port
+    property string cfg_HostDefault
+    property int cfg_PortDefault
 
+    onCfg_HostChanged: {
+       cfg_Host  = updateIpTextField.text;
+    }
 
     onCfg_PortChanged: {
-        updatePortnumberSpinBox.value = updatePortnumberSpinBox.cfg_Port;
+        cfg_Port =  updatePortnumberSpinBox.value;
     }
+
 
 
     Kirigami.FormLayout {
 
+
+        QQC2.TextField
+        {
+            id: updateIpTextField
+            inputMask: "000.000.000.000;_"
+            readOnly : false
+            text: cfg_Host
+
+            Kirigami.FormData.label: "EZ1 IP:"
+
+            // validator: RegularExpressionValidator {
+            //     regularExpression:  /^((?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])\.){0,3}(?:[0-1]?[0-9]?[0-9]|2[0-4][0-9]|25[0-5])$/
+            // }
+
+            onEditingFinished: cfg_Host = text
+
+        }
+
+
         QQC2.SpinBox {
             id: updatePortnumberSpinBox
-
-            Kirigami.FormData.label: "Change Port:"
+            value: cfg_Port
+            Kirigami.FormData.label: "EZ1 Port:"
 
             stepSize: 1
             from: 1
-            to: 1023
+            to: 65535
 
             validator: IntValidator {
                 bottom: updatePortnumberSpinBox.from
                 top: updatePortnumberSpinBox.to
             }
 
+            textFromValue: function(value) {
+                return value;
+            }
 
-            onValueChanged: cfg_Port = value
+            onValueChanged: cfg_Port = textFromValue(value)
 
         }
 

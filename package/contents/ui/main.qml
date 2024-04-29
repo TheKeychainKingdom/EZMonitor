@@ -11,6 +11,9 @@ import org.kde.kirigami as Kirigami
 PlasmoidItem {
     id:root
 
+    property string host: Plasmoid.configuration.Host //"192.168.178.38"
+    property int    port: Plasmoid.configuration.Port //8050
+
     property string p1: ""
     property string p2: ""
     property string summ: "0"
@@ -26,6 +29,7 @@ PlasmoidItem {
     implicitWidth: Kirigami.Units.gridUnit * 10
 
     function callback(x){
+
 
         if (x.responseText) {
             var d = JSON.parse(x.responseText);
@@ -47,11 +51,12 @@ PlasmoidItem {
 
 
     Timer {
+
         running: true
         repeat: true
         triggeredOnStart: true
         interval: 10000
-        onTriggered: request('http://192.168.178.38:8050/getOutputData',callback)
+        onTriggered: request('http://'+host+':'+port+'/getOutputData',callback)
     }
 
     // TODO: Plasmoid.fullRepresentation and  Plasmoid.compactRepresentation

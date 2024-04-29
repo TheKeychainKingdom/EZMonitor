@@ -5,7 +5,7 @@
         "Id": "de.agundur.ezmonitor",
         "Description": "Shows power produced by solar panels",
         "Category": "Status Information",
-		"Icon": "sun-fill.svg",
+		"Icon": "electron",
 		"Authors": [
 			{
 				"Email": "scholz@agundur.de",

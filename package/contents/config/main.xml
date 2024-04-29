@@ -1,1 +1,21 @@
- 
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name=""/>
+
+
+    <group name="Misc">
+        <entry name="Port" type="Int">
+            <default>8050</default>
+            <tooltip>The port the webserver of the EZ 1 M is listening on</tooltip>
+            <whatsthis>Hint: the EZ 1 M must be running in local mode !</whatsthis>
+        </entry>
+        <entry name="Host" type="string">
+            <default>192.168.178.38</default>
+            <tooltip>The ip the the EZ 1 M is running on</tooltip>
+            <whatsthis>Hint: the EZ 1 M must be running in local mode !</whatsthis>
+        </entry>
+    </group>
+</kcfg>
+

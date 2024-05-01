@@ -63,7 +63,11 @@ PlasmoidItem {
 
 
 
-    fullRepresentation: GridLayout {
+    fullRepresentation: ColumnLayout {
+
+
+        Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
+
 
         readonly property bool isVertical: {
             switch (Plasmoid.formFactor) {
@@ -86,29 +90,33 @@ PlasmoidItem {
         width:  isVertical ? root.width : implicitWidth
         height: isVertical ? implicitHeight : root.height
 
-        flow:   isVertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
+        // flow:   isVertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
 
 
         PlasmaComponents.Label{
             font: Kirigami.Theme.defaultFont
-            horizontalAlignment: Text.AlignHCenter
+            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+            Layout.leftMargin: 5
             wrapMode: Text.Wrap
             text:  i18n("Panel 1: "+root.p1+" Watt")
         }
 
         PlasmaComponents.Label{
             font: Kirigami.Theme.defaultFont
-            horizontalAlignment: Text.AlignHCenter
+            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+            Layout.leftMargin: 5
             wrapMode: Text.Wrap
             text: i18n("Panel 2: "+root.p2+" Watt")
         }
 
         PlasmaComponents.Label{
             font: Kirigami.Theme.defaultFont
-            horizontalAlignment: Text.AlignHCenter
+            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+            Layout.leftMargin: 5
             wrapMode: Text.Wrap
 
             text: i18n("Total: "+summ+" Watt")
         }
     }
+
 }

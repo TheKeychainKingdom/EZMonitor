@@ -60,22 +60,51 @@ PlasmoidItem {
     }
 
     // TODO: Plasmoid.fullRepresentation and  Plasmoid.compactRepresentation
-    ColumnLayout {
+
+
+
+    fullRepresentation: GridLayout {
+
+        readonly property bool isVertical: {
+            switch (Plasmoid.formFactor) {
+                case PlasmaCore.Types.Planar:
+                case PlasmaCore.Types.MediaCenter:
+                case PlasmaCore.Types.Application:
+                default:
+                    if (root.height > root.width) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                case PlasmaCore.Types.Vertical:
+                    return true;
+                case PlasmaCore.Types.Horizontal:
+                    return false;
+            }
+        }
+
+        width:  isVertical ? root.width : implicitWidth
+        height: isVertical ? implicitHeight : root.height
+
+        flow:   isVertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
+
 
         PlasmaComponents.Label{
+            font: Kirigami.Theme.defaultFont
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.Wrap
             text:  i18n("Panel 1: "+root.p1+" Watt")
         }
 
         PlasmaComponents.Label{
-
+            font: Kirigami.Theme.defaultFont
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.Wrap
             text: i18n("Panel 2: "+root.p2+" Watt")
         }
 
         PlasmaComponents.Label{
+            font: Kirigami.Theme.defaultFont
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.Wrap
 

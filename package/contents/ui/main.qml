@@ -18,6 +18,10 @@ PlasmoidItem {
     property string p2: ""
     property string summ: "0"
 
+    property string t1: ""
+    property string t2: ""
+    property string tsumm: "0"
+
 
     Plasmoid.status: PlasmaCore.Types.ActiveStatus
     Plasmoid.backgroundHints: PlasmaCore.Types.DefaultBackground | PlasmaCore.Types.ConfigurableBackground
@@ -30,15 +34,16 @@ PlasmoidItem {
 
     function callback(x){
 
-
         if (x.responseText) {
             var d = JSON.parse(x.responseText);
 
             root.p1 = d.data.p1;
             root.p2 = d.data.p2;
+            root.t1 = d.data.e1;
+            root.t2 = d.data.e2;
 
-            summ = (parseInt(root.p1)+parseInt(root.p2));
-
+            summ    = (parseInt(root.p1)+parseInt(root.p2));
+            tsumm   = (parseFloat(root.t1)+parseFloat(root.t2));
         }
     }
 
@@ -116,6 +121,15 @@ PlasmoidItem {
             wrapMode: Text.Wrap
 
             text: i18n("Total: "+summ+" Watt")
+        }
+
+        PlasmaComponents.Label{
+            font: Kirigami.Theme.defaultFont
+            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+            Layout.leftMargin: 5
+            wrapMode: Text.Wrap
+
+            text: i18n("Today: "+(Math.round( tsumm * 1e2 ) / 1e2)+" kWh")
         }
     }
 

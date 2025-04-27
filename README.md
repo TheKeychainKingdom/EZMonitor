@@ -26,7 +26,7 @@ make
 make install (as root)
 
 ## Usage
-Add the Plasmoid to your Desktop ena enjoy.
+Add the Plasmoid to your Desktop and enjoy.
 
 ## Support
 Open an issue in git ...

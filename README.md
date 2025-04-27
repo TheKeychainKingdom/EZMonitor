@@ -29,13 +29,19 @@ make install (as root)
 Add the Plasmoid to your Desktop ena enjoy.
 
 ## Support
-Open an issue in git
+Open an issue in git ...
+
+[EZMonitor Issues](https://www.opencode.net/agundur/ezmonitor/-/issues)
+
 
 ## Roadmap
 
 
 ## Contributing
-accepting contributions.
+accepting contributions ...
+
+[EZMonitor](https://www.opencode.net/agundur/ezmonitor)
+
 
 
 ## Authors and acknowledgment

@@ -6,7 +6,7 @@
 EZMonitor
 
 ## Description
-EZMonitor is KDE Plasmoid to connect to a apsystems EZ1 Microinverter and show the power each solar panel is producing.
+EZMonitor is a KDE Plasmoid to connect to a apsystems EZ1 Microinverter and show the power each solar panel is producing.
 
 ## Badges
 
@@ -26,7 +26,11 @@ make
 make install (as root)
 
 ## Usage
-Add the Plasmoid to your Desktop and enjoy.
+Enable the local API of your APsystems EZ1-M
+
+and 
+
+add the plasmoid to your desktop and enjoy.
 
 ## Support
 Open an issue in git ...

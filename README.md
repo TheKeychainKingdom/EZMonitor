@@ -12,12 +12,17 @@ EZMonitor is KDE Plasmoid to connect to a apsystems EZ1 Microinverter and show t
 
 
 ## Visuals
+![psystems EZ1 power output](EzMonitor.png)
+
 
 
 ## Installation
 mkdir build && cd build
+
 cmake ..
+
 make
+
 make install (as root)
 
 ## Usage

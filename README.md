@@ -39,6 +39,7 @@ accepting contributions.
 
 
 ## Authors and acknowledgment
+Alec
 
 ## License
 GPL

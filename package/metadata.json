@@ -5,19 +5,20 @@
         "Id": "de.agundur.ezmonitor",
         "Description": "Shows power produced by solar panels",
         "Category": "Status Information",
-		"Icon": "electron",
-		"Authors": [
-			{
-				"Email": "scholz@agundur.de",
-				"Name": "Alec"
-			}
-		],
+        "Icon": "electron",
+        "Authors": [
+            {
+                "Email": "scholz@agundur.de",
+                "Name": "Alec"
+            }
+        ],
         "Version": "0.1",
-		"License": "GPL",
-		"Website": "https://www.agundur.de",
-		"BugReportUrl": "scholz@agundur.de"
+        "License": "GPL",
+        "Website": "https://www.agundur.de",
+        "BugReportUrl": "scholz@agundur.de"
     },
     "X-Plasma-API-Minimum-Version": "6.0",
+    "X-KDE-PluginInfo-Name": "de.agundur.ezmonitor",
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/main.qml"
 }

@@ -15,9 +15,23 @@
 </a></div>
 
 ## Description
-EZMonitor is a KDE Plasmoid to connect to a apsystems EZ1 Microinverter and show the power each solar panel is producing.
+EZMonitor is a lightweight KDE Plasma 6 applet that displays real-time data from your solar inverter.
 
-## Badges
+Developed for the APsystems EZ1 microinverter series, it connects to the local JSON API provided by the device and shows:
+- 🌞 Live panel power (in Watts)
+- 📊 Daily yield (in kWh)
+- 🔄 Updates every 10 seconds
+
+No cloud service, no third-party backend – all data stays local.
+
+## ✅ Features
+
+- Built with pure QML – no C++ or Python dependencies
+- Compatible with Plasma 6
+- Uses standard HTTP API (see: [APsystems EZ1 API Manual](https://forum.iobroker.net/assets/uploads/files/1701255814508-apsystems-ez1-local-api-user-manual.pdf))
+- Clean UI for live monitoring
+
+
 
 
 ## Visuals
@@ -33,6 +47,36 @@ cmake ..
 make
 
 make install (as root)
+
+
+### 🖱 KDE GUI (recommended)
+
+1. Download `de.agundur.ezmonitor-X.Y.Z.plasmoid`
+2. Drag & drop onto your KDE panel or desktop
+3. Or install with:
+
+```bash
+kpackagetool6 --type Plasma/Applet --install de.agundur.ezmonitor-X.Y.Z.plasmoid
+```
+
+## 🛠️ Installing EZMonitor via the openSUSE Build Service Repository
+
+For openSUSE Tumbleweed (and compatible systems):
+
+```bash
+# Add the repository
+sudo zypper ar -f https://download.opensuse.org/repositories/home:/Agundur/openSUSE_Tumbleweed/home:Agundur.repo
+
+# Automatically import GPG key (required once)
+sudo zypper --gpg-auto-import-keys ref
+
+# Refresh repository metadata
+sudo zypper ref
+
+# Install EZMonitor
+sudo zypper in EZMonitor
+
+
 
 ## Usage
 Enable the local API of your APsystems EZ1-M

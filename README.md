@@ -33,7 +33,6 @@ No cloud service, no third-party backend – all data stays local.
 
 
 
-
 ## Visuals
 ![psystems EZ1 power output](EzMonitor.png)
 
@@ -60,6 +59,8 @@ kpackagetool6 --type Plasma/Applet --install de.agundur.ezmonitor-X.Y.Z.plasmoid
 ```
 
 ## 🛠️ Installing EZMonitor via the openSUSE Build Service Repository
+
+![Build Status](https://build.opensuse.org/projects/home:Agundur/packages/ezmonitor/badge.svg)
 
 For openSUSE Tumbleweed (and compatible systems):
 

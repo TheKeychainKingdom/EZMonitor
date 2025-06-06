@@ -60,7 +60,7 @@ kpackagetool6 --type Plasma/Applet --install de.agundur.ezmonitor-X.Y.Z.plasmoid
 
 ## 🛠️ Installing EZMonitor via the openSUSE Build Service Repository
 
-![Build Status](https://build.opensuse.org/projects/home:Agundur/packages/ezmonitor/badge.svg)
+[![build result](https://build.opensuse.org/projects/home:Agundur/packages/EZMonitor/badge.svg?type=default)](https://build.opensuse.org/package/show/home:Agundur/EZMonitor)
 
 For openSUSE Tumbleweed (and compatible systems):
 

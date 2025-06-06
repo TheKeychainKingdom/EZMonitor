@@ -75,7 +75,7 @@ sudo zypper ref
 
 # Install EZMonitor
 sudo zypper in EZMonitor
-
+```
 
 
 ## Usage

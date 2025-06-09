@@ -89,6 +89,19 @@ and
 
 add the plasmoid to your desktop and enjoy.
 
+
+## Tested Hardware
+
+EZMonitor has been tested successfully with the following micro inverter:
+
+🛒[APSystems EZ1-M Micro Inverter](https://amzn.to/4jGRqBY)  (Affiliate link)
+
+This inverter is fully supported by EZMonitor and has been used in daily production environments.
+
+Using the link above helps support further development of EZMonitor, at no additional cost to you.
+
+
+
 ## Support
 Open an issue in git ...
 

